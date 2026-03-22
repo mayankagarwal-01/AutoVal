@@ -19,6 +19,7 @@ import os
 
 import joblib
 import numpy as np
+import pandas as pd
 from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 
@@ -54,19 +55,19 @@ def _encode(col, value):
 
 def _build_input_vector(brand, vehicle_age, km_driven, seller_type,
                         fuel_type, transmission_type, mileage, engine, max_power, seats):
-    row = [
-        _encode("brand",             brand),
-        int(vehicle_age),
-        int(km_driven),
-        _encode("seller_type",       seller_type),
-        _encode("fuel_type",         fuel_type),
-        _encode("transmission_type", transmission_type),
-        float(mileage),
-        int(engine),
-        float(max_power),
-        int(seats),
-    ]
-    return np.array(row, dtype=float).reshape(1, -1)
+    row = {
+        "brand":             _encode("brand",             brand),
+        "vehicle_age":       int(vehicle_age),
+        "km_driven":         int(km_driven),
+        "seller_type":       _encode("seller_type",       seller_type),
+        "fuel_type":         _encode("fuel_type",         fuel_type),
+        "transmission_type": _encode("transmission_type", transmission_type),
+        "mileage":           float(mileage),
+        "engine":            int(engine),
+        "max_power":         float(max_power),
+        "seats":             int(seats),
+    }
+    return pd.DataFrame([row])
 
 def _build_factors(brand, vehicle_age, km_driven, fuel_type,
                    transmission_type, engine, max_power):
@@ -171,5 +172,5 @@ def health():
     return jsonify({"status": "ok", "service": "AutoVal API", "models_loaded": True})
 
 if __name__ == "__main__":
-    print("\n AutoVal server starting on http://localhost:5000\n")
-    app.run(debug=True, port=5000)
+    print("\n AutoVal server starting on http://localhost:8000\n")
+    app.run(debug=True, port=8000)
