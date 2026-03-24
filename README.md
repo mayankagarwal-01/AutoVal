@@ -137,6 +137,9 @@ AutoVal/
 ├── requirements.txt          # Python dependencies
 ├── cardekho_dataset.csv      # Source dataset
 │
+├── assets/
+  ├── form.png
+  └── dashboard.png
 ├── templates/
 │   └── index.html            # Frontend — form + metrics dashboard
 │
