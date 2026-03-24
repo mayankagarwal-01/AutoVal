@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,302 +8,321 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
-<div class="bg-grid"></div><div class="bg-glow"></div><div class="bg-glow2"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <div class="bg-glow2"></div>
 
-<header>
-  <div class="logo">Auto<span>Val</span></div>
-  <div class="header-tag">Car Price Intelligence · ML-Powered · CarDekho Dataset</div>
-</header>
+  <header>
+    <div class="logo">Auto<span>Val</span></div>
+    <div class="header-tag">Car Price Intelligence · ML-Powered · CarDekho Dataset</div>
+  </header>
 
-<div class="hero">
-  <div class="hero-eyebrow">Trained on 15,000+ Real Transactions</div>
-  <h1>Know Your Car's<br/><em>True Worth.</em></h1>
-  <p>Enter your vehicle's details below. Our Random Forest model — trained on real CarDekho resale data — delivers an accurate market price estimate in seconds.</p>
-</div>
+  <div class="hero">
+    <div class="hero-eyebrow">Trained on 15,000+ Real Transactions</div>
+    <h1>Know Your Car's<br /><em>True Worth.</em></h1>
+    <p>Enter your vehicle's details below. Our Random Forest model — trained on real CarDekho resale data — delivers an
+      accurate market price estimate in seconds.</p>
+  </div>
 
-<div class="main">
-  <div class="form-card">
+  <div class="main">
+    <div class="form-card">
 
-    <div class="form-section-title">Vehicle Identity</div>
-    <div class="form-grid">
-      <div class="field">
-        <label>Brand</label>
-        <select id="brand">
-          <option value="">Select Brand</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Vehicle Age (years)</label>
-        <div class="range-row">
-          <input type="range" id="ageSlider" min="0" max="29" step="1" value="5"/>
-          <div class="range-value" id="ageValue">5 yrs</div>
+      <div class="form-section-title">Vehicle Identity</div>
+      <div class="form-grid">
+        <div class="field">
+          <label>Brand</label>
+          <select id="brand">
+            <option value="">Select Brand</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Vehicle Age (years)</label>
+          <div class="range-row">
+            <input type="range" id="ageSlider" min="0" max="29" step="1" value="5" />
+            <div class="range-value" id="ageValue">5 yrs</div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-section-title">Specifications</div>
-    <div class="form-grid three">
-      <div class="field">
-        <label>Fuel Type</label>
-        <select id="fuelType">
-          <option value="">Select</option>
-          <option>Petrol</option><option>Diesel</option>
-          <option>CNG</option><option>LPG</option><option>Electric</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Transmission</label>
-        <select id="transmission">
-          <option value="">Select</option>
-          <option>Manual</option><option>Automatic</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Seller Type</label>
-        <select id="sellerType">
-          <option value="">Select</option>
-          <option>Individual</option><option>Dealer</option>
-          <option>Trustmark Dealer</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="form-grid three">
-      <div class="field">
-        <label>Engine (cc)</label>
-        <input type="number" id="engine" placeholder="e.g. 1197" min="500" max="7000"/>
-      </div>
-      <div class="field">
-        <label>Max Power (bhp)</label>
-        <input type="number" id="maxPower" placeholder="e.g. 82.0" step="0.1" min="30" max="700"/>
-      </div>
-      <div class="field">
-        <label>Mileage (kmpl)</label>
-        <input type="number" id="mileage" placeholder="e.g. 18.9" step="0.1" min="4" max="40"/>
-      </div>
-    </div>
-
-    <div class="form-grid">
-      <div class="field">
-        <label>Seats</label>
-        <select id="seats">
-          <option value="">Select</option>
-          <option value="2">2</option><option value="4">4</option>
-          <option value="5">5</option><option value="6">6</option>
-          <option value="7">7</option><option value="8">8</option>
-          <option value="9">9</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Kilometres Driven</label>
-        <div class="range-row">
-          <input type="range" id="kmSlider" min="100" max="500000" step="1000" value="40000"/>
-          <div class="range-value" id="kmValue">40,000 km</div>
+      <div class="form-section-title">Specifications</div>
+      <div class="form-grid three">
+        <div class="field">
+          <label>Fuel Type</label>
+          <select id="fuelType">
+            <option value="">Select</option>
+            <option>Petrol</option>
+            <option>Diesel</option>
+            <option>CNG</option>
+            <option>LPG</option>
+            <option>Electric</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Transmission</label>
+          <select id="transmission">
+            <option value="">Select</option>
+            <option>Manual</option>
+            <option>Automatic</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Seller Type</label>
+          <select id="sellerType">
+            <option value="">Select</option>
+            <option>Individual</option>
+            <option>Dealer</option>
+            <option>Trustmark Dealer</option>
+          </select>
         </div>
       </div>
-    </div>
 
-    <div class="form-section-title">Algorithm</div>
-    <div class="form-grid single">
-      <div class="field">
-        <label>ML Model</label>
-        <select id="mlModel">
-          <option value="rf">Random Forest Regressor</option>
-          <option value="lr">Linear Regression</option>
-        </select>
-      </div>
-    </div>
-
-    <button class="predict-btn" id="predictBtn" onclick="predict()">
-      <span class="btn-text">Estimate Price</span>
-      <span class="btn-spinner"><span class="spinner-ring"></span></span>
-    </button>
-
-  </div>
-
-  <div class="result-panel">
-    <div class="price-card" id="priceCard">
-      <div class="price-label">Estimated Resale Price</div>
-      <div class="price-value placeholder" id="priceValue">Fill the form</div>
-      <div class="price-range" id="priceRange"></div>
-    </div>
-    <div class="confidence-card">
-      <div class="confidence-title">Model Confidence</div>
-      <div class="conf-bar-bg"><div class="conf-bar-fill" id="confBar"></div></div>
-      <div class="conf-pct" id="confPct">—</div>
-    </div>
-    <div class="factors-card">
-      <div class="factors-title">Price Influencers</div>
-      <div id="factorsList">
-        <div class="factor-row visible">
-          <span class="factor-name">Enter car details</span>
-          <span class="factor-impact"><span class="impact-dot impact-neu"></span>—</span>
+      <div class="form-grid three">
+        <div class="field">
+          <label>Engine (cc)</label>
+          <input type="number" id="engine" placeholder="e.g. 1197" min="500" max="7000" />
+        </div>
+        <div class="field">
+          <label>Max Power (bhp)</label>
+          <input type="number" id="maxPower" placeholder="e.g. 82.0" step="0.1" min="30" max="700" />
+        </div>
+        <div class="field">
+          <label>Mileage (kmpl)</label>
+          <input type="number" id="mileage" placeholder="e.g. 18.9" step="0.1" min="4" max="40" />
         </div>
       </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label>Seats</label>
+          <select id="seats">
+            <option value="">Select</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Kilometres Driven</label>
+          <div class="range-row">
+            <input type="range" id="kmSlider" min="100" max="500000" step="1000" value="40000" />
+            <div class="range-value" id="kmValue">40,000 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section-title">Algorithm</div>
+      <div class="form-grid single">
+        <div class="field">
+          <label>ML Model</label>
+          <select id="mlModel">
+            <option value="rf">Random Forest Regressor</option>
+            <option value="lr">Linear Regression</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="predict-btn" id="predictBtn" onclick="predict()">
+        <span class="btn-text">Estimate Price</span>
+        <span class="btn-spinner"><span class="spinner-ring"></span></span>
+      </button>
+
     </div>
-    <div class="model-badge">
-      <span class="model-info">Algorithm</span>
-      <span class="model-name" id="modelName">Random Forest Regressor</span>
+
+    <div class="result-panel">
+      <div class="price-card" id="priceCard">
+        <div class="price-label">Estimated Resale Price</div>
+        <div class="price-value placeholder" id="priceValue">Fill the form</div>
+        <div class="price-range" id="priceRange"></div>
+      </div>
+      <div class="confidence-card">
+        <div class="confidence-title">Model Confidence</div>
+        <div class="conf-bar-bg">
+          <div class="conf-bar-fill" id="confBar"></div>
+        </div>
+        <div class="conf-pct" id="confPct">—</div>
+      </div>
+      <div class="factors-card">
+        <div class="factors-title">Price Influencers</div>
+        <div id="factorsList">
+          <div class="factor-row visible">
+            <span class="factor-name">Enter car details</span>
+            <span class="factor-impact"><span class="impact-dot impact-neu"></span>—</span>
+          </div>
+        </div>
+      </div>
+      <div class="model-badge">
+        <span class="model-info">Algorithm</span>
+        <span class="model-name" id="modelName">Random Forest Regressor</span>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- METRICS DASHBOARD -->
-<div class="metrics-section">
-  <div class="metrics-header">
-    <div class="metrics-eyebrow">Model Performance</div>
-    <h2 class="metrics-title">Evaluation Metrics</h2>
-    <p class="metrics-sub">Real benchmarks computed from the CarDekho dataset (15,397 records, 80/20 train-test split). All numbers are live from the trained models.</p>
-    <div class="algo-tabs">
-      <button class="algo-tab active" onclick="switchAlgo('rf',this)">Random Forest</button>
-      <button class="algo-tab" onclick="switchAlgo('lr',this)">Linear Regression</button>
+  <!-- METRICS DASHBOARD -->
+  <div class="metrics-section">
+    <div class="metrics-header">
+      <div class="metrics-eyebrow">Model Performance</div>
+      <h2 class="metrics-title">Evaluation Metrics</h2>
+      <p class="metrics-sub">Real benchmarks computed from the CarDekho dataset (15,397 records, 80/20 train-test
+        split). All numbers are live from the trained models.</p>
+      <div class="algo-tabs">
+        <button class="algo-tab active" onclick="switchAlgo('rf',this)">Random Forest</button>
+        <button class="algo-tab" onclick="switchAlgo('lr',this)">Linear Regression</button>
+      </div>
+    </div>
+    <div class="kpi-grid" id="kpiGrid"></div>
+    <div class="charts-row">
+      <div class="chart-card">
+        <div class="chart-title">Actual vs Predicted Prices (₹ Lakhs)</div>
+        <div style="position:relative;height:260px;"><canvas id="scatterChart"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Residual Distribution</div>
+        <div style="position:relative;height:260px;"><canvas id="residualChart"></canvas></div>
+      </div>
+    </div>
+    <div class="charts-row">
+      <div class="chart-card">
+        <div class="chart-title">Feature Importance (%)</div>
+        <div style="position:relative;height:300px;"><canvas id="importanceChart"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Algorithm Comparison</div>
+        <div style="position:relative;height:300px;"><canvas id="comparisonChart"></canvas></div>
+      </div>
+    </div>
+    <div class="charts-row single-chart">
+      <div class="chart-card">
+        <div class="chart-title">Prediction Error by Vehicle Age (MAE ₹ Lakhs)</div>
+        <div style="position:relative;height:220px;"><canvas id="ageErrorChart"></canvas></div>
+      </div>
     </div>
   </div>
-  <div class="kpi-grid" id="kpiGrid"></div>
-  <div class="charts-row">
-    <div class="chart-card">
-      <div class="chart-title">Actual vs Predicted Prices (₹ Lakhs)</div>
-      <div style="position:relative;height:260px;"><canvas id="scatterChart"></canvas></div>
-    </div>
-    <div class="chart-card">
-      <div class="chart-title">Residual Distribution</div>
-      <div style="position:relative;height:260px;"><canvas id="residualChart"></canvas></div>
-    </div>
+
+  <div class="disclaimer">
+    <strong style="color:var(--text)">Real ML Model:</strong> Predictions are generated server-side by a trained
+    scikit-learn RandomForestRegressor / LinearRegression loaded from <code>rf_model.pkl</code> /
+    <code>lr_model.pkl</code>. Retrain at any time with <code>python train.py --data cardekho_dataset.csv</code>.
   </div>
-  <div class="charts-row">
-    <div class="chart-card">
-      <div class="chart-title">Feature Importance (%)</div>
-      <div style="position:relative;height:300px;"><canvas id="importanceChart"></canvas></div>
-    </div>
-    <div class="chart-card">
-      <div class="chart-title">Algorithm Comparison</div>
-      <div style="position:relative;height:300px;"><canvas id="comparisonChart"></canvas></div>
-    </div>
-  </div>
-  <div class="charts-row single-chart">
-    <div class="chart-card">
-      <div class="chart-title">Prediction Error by Vehicle Age (MAE ₹ Lakhs)</div>
-      <div style="position:relative;height:220px;"><canvas id="ageErrorChart"></canvas></div>
-    </div>
-  </div>
-</div>
 
-<div class="disclaimer">
-  <strong style="color:var(--text)">Real ML Model:</strong> Predictions are generated server-side by a trained scikit-learn RandomForestRegressor / LinearRegression loaded from <code>rf_model.pkl</code> / <code>lr_model.pkl</code>. Retrain at any time with <code>python train.py --data cardekho_dataset.csv</code>.
-</div>
-
-<script>
-// ── Populate brands from /api/encoders ───────────────────────────────────────
-fetch('/api/encoders').then(r => r.json()).then(enc => {
-  const sel = document.getElementById('brand');
-  (enc.brand || []).sort().forEach(b => {
-    const o = document.createElement('option');
-    o.value = b; o.textContent = b; sel.appendChild(o);
-  });
-});
-
-// ── Sliders ──────────────────────────────────────────────────────────────────
-function initSlider(sliderId, displayId, formatter) {
-  const slider = document.getElementById(sliderId);
-  const display = document.getElementById(displayId);
-  slider.addEventListener('input', () => {
-    display.textContent = formatter(parseInt(slider.value));
-    const pct = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
-    slider.style.background = `linear-gradient(to right,var(--accent) ${pct}%,var(--surface) ${pct}%)`;
-  });
-  // init display
-  display.textContent = formatter(parseInt(slider.value));
-}
-initSlider('kmSlider',  'kmValue',  v => v.toLocaleString('en-IN') + ' km');
-initSlider('ageSlider', 'ageValue', v => v + (v === 1 ? ' yr' : ' yrs'));
-
-// ── Predict ──────────────────────────────────────────────────────────────────
-async function predict() {
-  const brand        = document.getElementById('brand').value;
-  const vehicle_age  = parseInt(document.getElementById('ageSlider').value);
-  const km_driven    = parseInt(document.getElementById('kmSlider').value);
-  const seller_type  = document.getElementById('sellerType').value;
-  const fuel_type    = document.getElementById('fuelType').value;
-  const transmission_type = document.getElementById('transmission').value;
-  const mileage      = parseFloat(document.getElementById('mileage').value);
-  const engine       = parseInt(document.getElementById('engine').value);
-  const max_power    = parseFloat(document.getElementById('maxPower').value);
-  const seats        = parseInt(document.getElementById('seats').value);
-  const model        = document.getElementById('mlModel').value;
-
-  if (!brand || !seller_type || !fuel_type || !transmission_type ||
-      isNaN(mileage) || isNaN(engine) || isNaN(max_power) || isNaN(seats)) {
-    shakeForm(); return;
-  }
-
-  const btn = document.getElementById('predictBtn');
-  btn.classList.add('loading');
-
-  try {
-    const res = await fetch('/api/predict', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({brand, vehicle_age, km_driven, seller_type,
-                            fuel_type, transmission_type, mileage,
-                            engine, max_power, seats, model}),
+  <script>
+    // ── Populate brands from /api/encoders ───────────────────────────────────────
+    fetch('/api/encoders').then(r => r.json()).then(enc => {
+      const sel = document.getElementById('brand');
+      (enc.brand || []).sort().forEach(b => {
+        const o = document.createElement('option');
+        o.value = b; o.textContent = b; sel.appendChild(o);
+      });
     });
-    if (!res.ok) { const e = await res.json(); alert(e.error || 'Server error'); return; }
-    showResult(await res.json());
-  } catch(e) {
-    alert('Cannot reach server. Is Flask running on port 5000?');
-  } finally {
-    btn.classList.remove('loading');
-  }
-}
 
-function showResult(data) {
-  const priceEl = document.getElementById('priceValue');
-  const priceCard = document.getElementById('priceCard');
-  const priceRange = document.getElementById('priceRange');
-  priceEl.className = 'price-value';
-  priceEl.textContent = '₹ ' + data.price.toFixed(2) + ' L';
-  priceRange.textContent = `Range: ₹${data.price_low}L – ₹${data.price_high}L`;
-  priceRange.classList.add('visible');
-  priceCard.classList.add('revealed');
-  setTimeout(() => {
-    document.getElementById('confBar').style.width = data.confidence + '%';
-    document.getElementById('confPct').textContent = data.confidence + '%';
-  }, 100);
-  document.getElementById('modelName').textContent = data.model_name;
-  const list = document.getElementById('factorsList');
-  list.innerHTML = '';
-  data.factors.forEach((f, i) => {
-    const row = document.createElement('div');
-    row.className = 'factor-row';
-    const dc = f.impact > 0 ? 'impact-pos' : f.impact < 0 ? 'impact-neg' : 'impact-neu';
-    const col = f.impact > 0 ? 'var(--accent)' : f.impact < 0 ? 'var(--accent2)' : 'var(--muted)';
-    row.innerHTML = `<span class="factor-name">${f.name}</span>
+    // ── Sliders ──────────────────────────────────────────────────────────────────
+    function initSlider(sliderId, displayId, formatter) {
+      const slider = document.getElementById(sliderId);
+      const display = document.getElementById(displayId);
+      slider.addEventListener('input', () => {
+        display.textContent = formatter(parseInt(slider.value));
+        const pct = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+        slider.style.background = `linear-gradient(to right,var(--accent) ${pct}%,var(--surface) ${pct}%)`;
+      });
+      // init display
+      display.textContent = formatter(parseInt(slider.value));
+    }
+    initSlider('kmSlider', 'kmValue', v => v.toLocaleString('en-IN') + ' km');
+    initSlider('ageSlider', 'ageValue', v => v + (v === 1 ? ' yr' : ' yrs'));
+
+    // ── Predict ──────────────────────────────────────────────────────────────────
+    async function predict() {
+      const brand = document.getElementById('brand').value;
+      const vehicle_age = parseInt(document.getElementById('ageSlider').value);
+      const km_driven = parseInt(document.getElementById('kmSlider').value);
+      const seller_type = document.getElementById('sellerType').value;
+      const fuel_type = document.getElementById('fuelType').value;
+      const transmission_type = document.getElementById('transmission').value;
+      const mileage = parseFloat(document.getElementById('mileage').value);
+      const engine = parseInt(document.getElementById('engine').value);
+      const max_power = parseFloat(document.getElementById('maxPower').value);
+      const seats = parseInt(document.getElementById('seats').value);
+      const model = document.getElementById('mlModel').value;
+
+      if (!brand || !seller_type || !fuel_type || !transmission_type ||
+        isNaN(mileage) || isNaN(engine) || isNaN(max_power) || isNaN(seats)) {
+        shakeForm(); return;
+      }
+
+      const btn = document.getElementById('predictBtn');
+      btn.classList.add('loading');
+
+      try {
+        const res = await fetch('/api/predict', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            brand, vehicle_age, km_driven, seller_type,
+            fuel_type, transmission_type, mileage,
+            engine, max_power, seats, model
+          }),
+        });
+        if (!res.ok) { const e = await res.json(); alert(e.error || 'Server error'); return; }
+        showResult(await res.json());
+      } catch (e) {
+        alert('Cannot reach server. Is Flask running on port 5000?');
+      } finally {
+        btn.classList.remove('loading');
+      }
+    }
+
+    function showResult(data) {
+      const priceEl = document.getElementById('priceValue');
+      const priceCard = document.getElementById('priceCard');
+      const priceRange = document.getElementById('priceRange');
+      priceEl.className = 'price-value';
+      priceEl.textContent = '₹ ' + data.price.toFixed(2) + ' L';
+      priceRange.textContent = `Range: ₹${data.price_low}L – ₹${data.price_high}L`;
+      priceRange.classList.add('visible');
+      priceCard.classList.add('revealed');
+      setTimeout(() => {
+        document.getElementById('confBar').style.width = data.confidence + '%';
+        document.getElementById('confPct').textContent = data.confidence + '%';
+      }, 100);
+      document.getElementById('modelName').textContent = data.model_name;
+      const list = document.getElementById('factorsList');
+      list.innerHTML = '';
+      data.factors.forEach((f, i) => {
+        const row = document.createElement('div');
+        row.className = 'factor-row';
+        const dc = f.impact > 0 ? 'impact-pos' : f.impact < 0 ? 'impact-neg' : 'impact-neu';
+        const col = f.impact > 0 ? 'var(--accent)' : f.impact < 0 ? 'var(--accent2)' : 'var(--muted)';
+        row.innerHTML = `<span class="factor-name">${f.name}</span>
       <span class="factor-impact"><span class="impact-dot ${dc}"></span>
-      <span style="color:${col}">${f.impact>0?'+':''}${f.label}</span></span>`;
-    list.appendChild(row);
-    setTimeout(() => row.classList.add('visible'), 80 * i);
-  });
-}
+      <span style="color:${col}">${f.impact > 0 ? '+' : ''}${f.label}</span></span>`;
+        list.appendChild(row);
+        setTimeout(() => row.classList.add('visible'), 80 * i);
+      });
+    }
 
-function shakeForm() {
-  const card = document.querySelector('.form-card');
-  card.style.borderColor = 'var(--accent2)';
-  setTimeout(() => { card.style.borderColor = ''; }, 700);
-}
+    function shakeForm() {
+      const card = document.querySelector('.form-card');
+      card.style.borderColor = 'var(--accent2)';
+      setTimeout(() => { card.style.borderColor = ''; }, 700);
+    }
 
-// ── Metrics ──────────────────────────────────────────────────────────────────
-let scatterInst, residualInst, importanceInst, comparisonInst, ageErrorInst;
+    // ── Metrics ──────────────────────────────────────────────────────────────────
+    let scatterInst, residualInst, importanceInst, comparisonInst, ageErrorInst;
 
-async function switchAlgo(algo, el) {
-  document.querySelectorAll('.algo-tab').forEach(t => t.classList.remove('active'));
-  el.classList.add('active');
-  await Promise.all([renderKPIs(algo), renderScatter(algo), renderResidual(algo)]);
-}
+    async function switchAlgo(algo, el) {
+      document.querySelectorAll('.algo-tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      await Promise.all([renderKPIs(algo), renderScatter(algo), renderResidual(algo)]);
+    }
 
-async function renderKPIs(algo) {
-  const m = await fetch(`/api/metrics?algo=${algo}`).then(r => r.json());
-  document.getElementById('kpiGrid').innerHTML = `
+    async function renderKPIs(algo) {
+      const m = await fetch(`/api/metrics?algo=${algo}`).then(r => r.json());
+      document.getElementById('kpiGrid').innerHTML = `
     <div class="kpi-card accent1"><div class="kpi-label">R² Score</div>
       <div class="kpi-value good">${m.r2.toFixed(3)}</div>
       <div class="kpi-delta">Variance explained</div></div>
@@ -315,111 +335,138 @@ async function renderKPIs(algo) {
     <div class="kpi-card accent4"><div class="kpi-label">MAPE</div>
       <div class="kpi-value green">${m.mape.toFixed(1)}%</div>
       <div class="kpi-delta">Mean Absolute % Error</div></div>`;
-}
+    }
 
-async function renderScatter(algo) {
-  const json = await fetch(`/api/metrics/scatter?algo=${algo}`).then(r => r.json());
-  const pts = json.points.map(p => ({x: p.actual, y: p.predicted}));
-  const maxVal = Math.max(...json.points.map(p => Math.max(p.actual, p.predicted)));
-  const ideal = [{x:0,y:0},{x:maxVal,y:maxVal}];
-  if (scatterInst) scatterInst.destroy();
-  scatterInst = new Chart(document.getElementById('scatterChart'), {
-    type:'scatter',
-    data:{datasets:[
-      {data:pts, backgroundColor: algo==='rf'?'rgba(232,255,71,0.65)':'rgba(255,107,53,0.65)', pointRadius:4, pointHoverRadius:6},
-      {data:ideal, type:'line', borderColor:'rgba(255,255,255,0.2)', borderDash:[4,4], pointRadius:0, fill:false},
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{title:{display:true,text:'Actual (₹L)',color:'#7a7a9a',font:{size:11}},ticks:{color:'#7a7a9a'},grid:{color:'rgba(255,255,255,0.05)'}},
-        y:{title:{display:true,text:'Predicted (₹L)',color:'#7a7a9a',font:{size:11}},ticks:{color:'#7a7a9a'},grid:{color:'rgba(255,255,255,0.05)'}},
-      }},
-  });
-}
+    async function renderScatter(algo) {
+      const json = await fetch(`/api/metrics/scatter?algo=${algo}`).then(r => r.json());
+      const pts = json.points.map(p => ({ x: p.actual, y: p.predicted }));
+      const maxVal = Math.max(...json.points.map(p => Math.max(p.actual, p.predicted)));
+      const ideal = [{ x: 0, y: 0 }, { x: maxVal, y: maxVal }];
+      if (scatterInst) scatterInst.destroy();
+      scatterInst = new Chart(document.getElementById('scatterChart'), {
+        type: 'scatter',
+        data: {
+          datasets: [
+            { data: pts, backgroundColor: algo === 'rf' ? 'rgba(232,255,71,0.65)' : 'rgba(255,107,53,0.65)', pointRadius: 4, pointHoverRadius: 6 },
+            { data: ideal, type: 'line', borderColor: 'rgba(255,255,255,0.2)', borderDash: [4, 4], pointRadius: 0, fill: false },
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { title: { display: true, text: 'Actual (₹L)', color: '#7a7a9a', font: { size: 11 } }, ticks: { color: '#7a7a9a' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+            y: { title: { display: true, text: 'Predicted (₹L)', color: '#7a7a9a', font: { size: 11 } }, ticks: { color: '#7a7a9a' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+          }
+        },
+      });
+    }
 
-async function renderResidual(algo) {
-  const json = await fetch(`/api/metrics/residuals?algo=${algo}`).then(r => r.json());
-  if (residualInst) residualInst.destroy();
-  residualInst = new Chart(document.getElementById('residualChart'), {
-    type:'bar',
-    data:{labels:json.bins.map(b=>b.toFixed(1)),
-      datasets:[{data:json.counts,
-        backgroundColor:algo==='rf'?'rgba(232,255,71,0.6)':'rgba(255,107,53,0.6)',
-        borderRadius:4,borderSkipped:false}]},
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{title:{display:true,text:'Residual (₹L)',color:'#7a7a9a',font:{size:11}},ticks:{color:'#7a7a9a',font:{size:10},autoSkip:true,maxTicksLimit:8},grid:{color:'rgba(255,255,255,0.05)'}},
-        y:{ticks:{color:'#7a7a9a'},grid:{color:'rgba(255,255,255,0.05)'}},
-      }},
-  });
-}
+    async function renderResidual(algo) {
+      const json = await fetch(`/api/metrics/residuals?algo=${algo}`).then(r => r.json());
+      if (residualInst) residualInst.destroy();
+      residualInst = new Chart(document.getElementById('residualChart'), {
+        type: 'bar',
+        data: {
+          labels: json.bins.map(b => b.toFixed(1)),
+          datasets: [{
+            data: json.counts,
+            backgroundColor: algo === 'rf' ? 'rgba(232,255,71,0.6)' : 'rgba(255,107,53,0.6)',
+            borderRadius: 4, borderSkipped: false
+          }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { title: { display: true, text: 'Residual (₹L)', color: '#7a7a9a', font: { size: 11 } }, ticks: { color: '#7a7a9a', font: { size: 10 }, autoSkip: true, maxTicksLimit: 8 }, grid: { color: 'rgba(255,255,255,0.05)' } },
+            y: { ticks: { color: '#7a7a9a' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+          }
+        },
+      });
+    }
 
-async function renderImportance() {
-  const json = await fetch('/api/metrics/importance').then(r => r.json());
-  const labels = json.rf.map(f => f.feature);
-  if (importanceInst) importanceInst.destroy();
-  importanceInst = new Chart(document.getElementById('importanceChart'), {
-    type:'bar',
-    data:{labels,datasets:[
-      {label:'Random Forest',    data:json.rf.map(f=>f.importance), backgroundColor:'rgba(232,255,71,0.75)',borderRadius:4,borderSkipped:false},
-      {label:'Linear Regression',data:json.lr.map(f=>f.importance), backgroundColor:'rgba(255,107,53,0.65)',borderRadius:4,borderSkipped:false},
-    ]},
-    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{ticks:{color:'#7a7a9a',font:{size:10},callback:v=>v+'%'},grid:{color:'rgba(255,255,255,0.05)'}},
-        y:{ticks:{color:'#9999bb',font:{size:11}},grid:{display:false}},
-      }},
-  });
-}
+    async function renderImportance() {
+      const json = await fetch('/api/metrics/importance').then(r => r.json());
+      const labels = json.rf.map(f => f.feature);
+      if (importanceInst) importanceInst.destroy();
+      importanceInst = new Chart(document.getElementById('importanceChart'), {
+        type: 'bar',
+        data: {
+          labels, datasets: [
+            { label: 'Random Forest', data: json.rf.map(f => f.importance), backgroundColor: 'rgba(232,255,71,0.75)', borderRadius: 4, borderSkipped: false },
+            { label: 'Linear Regression', data: json.lr.map(f => f.importance), backgroundColor: 'rgba(255,107,53,0.65)', borderRadius: 4, borderSkipped: false },
+          ]
+        },
+        options: {
+          indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: '#7a7a9a', font: { size: 10 }, callback: v => v + '%' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+            y: { ticks: { color: '#9999bb', font: { size: 11 } }, grid: { display: false } },
+          }
+        },
+      });
+    }
 
-async function renderComparison() {
-  const [rf, lr] = await Promise.all([
-    fetch('/api/metrics?algo=rf').then(r=>r.json()),
-    fetch('/api/metrics?algo=lr').then(r=>r.json()),
-  ]);
-  const rfN = [rf.r2*100, (1-rf.mae/5)*100,  (1-rf.rmse/7)*100,  (1-rf.mape/60)*100];
-  const lrN = [lr.r2*100, (1-lr.mae/5)*100,  (1-lr.rmse/7)*100,  (1-lr.mape/60)*100];
-  if (comparisonInst) comparisonInst.destroy();
-  comparisonInst = new Chart(document.getElementById('comparisonChart'), {
-    type:'radar',
-    data:{labels:['R² Score','MAE','RMSE','MAPE'],datasets:[
-      {label:'Random Forest',    data:rfN, backgroundColor:'rgba(232,255,71,0.12)',borderColor:'#e8ff47',borderWidth:2,pointBackgroundColor:'#e8ff47',pointRadius:4},
-      {label:'Linear Regression',data:lrN, backgroundColor:'rgba(255,107,53,0.10)',borderColor:'#ff6b35',borderWidth:2,pointBackgroundColor:'#ff6b35',pointRadius:4},
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false}},
-      scales:{r:{min:0,max:100,ticks:{display:false},grid:{color:'rgba(255,255,255,0.07)'},
-        pointLabels:{color:'#9999bb',font:{size:11}},angleLines:{color:'rgba(255,255,255,0.07)'}}}},
-  });
-}
+    async function renderComparison() {
+      const [rf, lr] = await Promise.all([
+        fetch('/api/metrics?algo=rf').then(r => r.json()),
+        fetch('/api/metrics?algo=lr').then(r => r.json()),
+      ]);
+      const rfN = [rf.r2 * 100, (1 - rf.mae / 5) * 100, (1 - rf.rmse / 7) * 100, (1 - rf.mape / 60) * 100];
+      const lrN = [lr.r2 * 100, (1 - lr.mae / 5) * 100, (1 - lr.rmse / 7) * 100, (1 - lr.mape / 60) * 100];
+      if (comparisonInst) comparisonInst.destroy();
+      comparisonInst = new Chart(document.getElementById('comparisonChart'), {
+        type: 'radar',
+        data: {
+          labels: ['R² Score', 'MAE', 'RMSE', 'MAPE'], datasets: [
+            { label: 'Random Forest', data: rfN, backgroundColor: 'rgba(232,255,71,0.12)', borderColor: '#e8ff47', borderWidth: 2, pointBackgroundColor: '#e8ff47', pointRadius: 4 },
+            { label: 'Linear Regression', data: lrN, backgroundColor: 'rgba(255,107,53,0.10)', borderColor: '#ff6b35', borderWidth: 2, pointBackgroundColor: '#ff6b35', pointRadius: 4 },
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            r: {
+              min: 0, max: 100, ticks: { display: false }, grid: { color: 'rgba(255,255,255,0.07)' },
+              pointLabels: { color: '#9999bb', font: { size: 11 } }, angleLines: { color: 'rgba(255,255,255,0.07)' }
+            }
+          }
+        },
+      });
+    }
 
-async function renderAgeError() {
-  const json = await fetch('/api/metrics/age-error').then(r => r.json());
-  if (ageErrorInst) ageErrorInst.destroy();
-  ageErrorInst = new Chart(document.getElementById('ageErrorChart'), {
-    type:'line',
-    data:{labels:json.ages,datasets:[
-      {label:'RF',  data:json.rf, borderColor:'#e8ff47',backgroundColor:'rgba(232,255,71,0.08)',borderWidth:2.5,pointRadius:4,pointBackgroundColor:'#e8ff47',fill:true,tension:0.35},
-      {label:'LR',  data:json.lr, borderColor:'#ff6b35',backgroundColor:'rgba(255,107,53,0.07)',borderWidth:2.5,pointRadius:4,pointBackgroundColor:'#ff6b35',fill:true,tension:0.35},
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{ticks:{color:'#7a7a9a',font:{size:11},autoSkip:false},grid:{color:'rgba(255,255,255,0.05)'}},
-        y:{title:{display:true,text:'MAE (₹L)',color:'#7a7a9a',font:{size:11}},ticks:{color:'#7a7a9a',callback:v=>'₹'+v.toFixed(2)},grid:{color:'rgba(255,255,255,0.05)'}},
-      }},
-  });
-}
+    async function renderAgeError() {
+      const json = await fetch('/api/metrics/age-error').then(r => r.json());
+      if (ageErrorInst) ageErrorInst.destroy();
+      ageErrorInst = new Chart(document.getElementById('ageErrorChart'), {
+        type: 'line',
+        data: {
+          labels: json.ages, datasets: [
+            { label: 'RF', data: json.rf, borderColor: '#e8ff47', backgroundColor: 'rgba(232,255,71,0.08)', borderWidth: 2.5, pointRadius: 4, pointBackgroundColor: '#e8ff47', fill: true, tension: 0.35 },
+            { label: 'LR', data: json.lr, borderColor: '#ff6b35', backgroundColor: 'rgba(255,107,53,0.07)', borderWidth: 2.5, pointRadius: 4, pointBackgroundColor: '#ff6b35', fill: true, tension: 0.35 },
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: '#7a7a9a', font: { size: 11 }, autoSkip: false }, grid: { color: 'rgba(255,255,255,0.05)' } },
+            y: { title: { display: true, text: 'MAE (₹L)', color: '#7a7a9a', font: { size: 11 } }, ticks: { color: '#7a7a9a', callback: v => '₹' + v.toFixed(2) }, grid: { color: 'rgba(255,255,255,0.05)' } },
+          }
+        },
+      });
+    }
 
-async function initMetrics() {
-  await Promise.all([renderKPIs('rf'),renderScatter('rf'),renderResidual('rf'),
-                     renderImportance(),renderComparison(),renderAgeError()]);
-}
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script>window.addEventListener('load', initMetrics);</script>
+    async function initMetrics() {
+      await Promise.all([renderKPIs('rf'), renderScatter('rf'), renderResidual('rf'),
+      renderImportance(), renderComparison(), renderAgeError()]);
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script>window.addEventListener('load', initMetrics);</script>
 </body>
+
 </html>
