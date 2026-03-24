@@ -396,6 +396,12 @@ Metrics charts fetch from /api/metrics/* endpoints
 
 <div align="center">
 
-Made by [Mayank Agarwal](https://github.com/mayankagarwal-01)
+Contributors 
+[Mayank Agarwal]
+[Shreyansh Verma]
+[Suryansh Panda]
+[Janhavi Maheshwari]
+[Yashovardhan Singh]
+[Khushbu Raj]
 
 </div>
