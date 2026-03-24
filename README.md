@@ -140,6 +140,8 @@ AutoVal/
 ├── assets/
   ├── form.png
   └── dashboard.png
+├── static/
+│   └── style.css  
 ├── templates/
 │   └── index.html            # Frontend — form + metrics dashboard
 │
